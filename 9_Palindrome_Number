@@ -1,0 +1,17 @@
+class Solution {
+public:
+    bool isPalindrome(int x) {
+        if(x<0){
+            return false;
+        }
+        long sum = 0, d, tmp=x;
+        while(tmp!=0){
+            d=tmp%10;
+            sum = sum*10+d;
+            tmp/=10;
+        }
+        if(x==sum){
+            return true;
+        } else return false;
+    }
+};
